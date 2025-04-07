@@ -7,12 +7,17 @@ import ClickUan from './ClickUan';
 import SelectMemberId from './SelectMemberId';
 import SubmitAccountNumber from './SubmitAccountNumber';
 import SubmitAddress from './SubmitAddress';
+import SearchRaiseClaim from './SearchRaiseClaim';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/claim-umang/login' element={<Login />} />
+        <Route
+          path='/claim-umang/search-raise-claim'
+          element={<SearchRaiseClaim />}
+        />
         <Route path='/claim-umang/epfo' element={<ClickEpfo />} />
         <Route path='/claim-umang/uan' element={<ClickUan />} />
         <Route
