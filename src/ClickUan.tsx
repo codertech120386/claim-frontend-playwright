@@ -11,20 +11,20 @@ const ClickUan = () => {
     if (uanSubmitResponse?.data?.success) {
       console.log('Uan submitted');
 
-      // setTimeout(async () => {
-      //   const closeButtonClickResponse = await axios.post(
-      //     '/click-close-button',
-      //     {
-      //       userId,
-      //     }
-      //   );
+      setTimeout(async () => {
+        const closeButtonClickResponse = await axios.post(
+          '/click-close-button',
+          {
+            userId,
+          }
+        );
 
-      //   if (closeButtonClickResponse?.data?.success) {
-      //     console.log('Close button clicked');
-      //   } else {
-      //     console.log('Close button not clicked');
-      //   }
-      // }, 7000);
+        if (closeButtonClickResponse?.data?.success) {
+          console.log('Close button clicked');
+        } else {
+          console.log('Close button not clicked');
+        }
+      }, 5000);
     } else {
       console.log('Uan not submitted');
     }

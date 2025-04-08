@@ -8,6 +8,7 @@ import SelectMemberId from './SelectMemberId';
 import SubmitAccountNumber from './SubmitAccountNumber';
 import SubmitAddress from './SubmitAddress';
 import SearchRaiseClaim from './SearchRaiseClaim';
+import SubmitServiceDetails from './SubmitserviceDetails';
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
         <Route
           path='/claim-umang/submit-account-number'
           element={<SubmitAccountNumber />}
+        />
+        <Route
+          path='/claim-umang/submit-service-details'
+          element={<SubmitServiceDetails />}
         />
         <Route path='/claim-umang/submit-address' element={<SubmitAddress />} />
       </Routes>

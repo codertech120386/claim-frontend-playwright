@@ -3,20 +3,20 @@ import { useState } from 'react';
 
 const SubmitAddress = () => {
   const [userId, setUserId] = useState('');
-  const [locality, setLocality] = useState('');
-  const [state, setState] = useState('');
-  const [district, setDistrict] = useState('');
-  const [city, setCity] = useState('');
-  const [pincode, setPincode] = useState('');
+  const [locality, setLocality] = useState('SAPPHIRE HEIGHTS');
+  const [state, setState] = useState('MAHARASHTRA');
+  const [district, setDistrict] = useState('MUMBAI');
+  const [city, setCity] = useState('MUMBAI');
+  const [pinCode, setPinCode] = useState('400101');
 
   const handleMemberIdSubmit = async () => {
-    const submitAddressResponse = await axios.post('/submit-address', {
+    const submitAddressResponse = await axios.post('/submit-address-details', {
       userId,
       locality,
       state,
       district,
       city,
-      pincode,
+      pinCode,
     });
 
     if (submitAddressResponse?.data?.success) {
@@ -73,8 +73,8 @@ const SubmitAddress = () => {
       <br />
       <input
         type='text'
-        value={pincode}
-        onChange={(e) => setPincode(e.target.value)}
+        value={pinCode}
+        onChange={(e) => setPinCode(e.target.value)}
       />
       <br />
 
